@@ -11,4 +11,4 @@
 
 *I anticipate some learning curve for Tailwind, and authentication for storing individual data*
 
-*Stretch features for the front end include a keyword search bar, a grid to plan garden plots, and authentication*
+*Stretch features for the front end include a keyword search bar and a grid to plan garden plots*

@@ -1,8 +1,11 @@
+import Monthly from '../components/Monthly';
 
 function Journal () {
     return (
-        <h1>This is my Journal Page</h1>
-      
+        <>
+        <h1>This is my Journal Home Page</h1>
+        <Monthly />
+        </>
     )
 }
 

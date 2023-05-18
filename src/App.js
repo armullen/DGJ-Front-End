@@ -18,6 +18,7 @@ import September from './pages/September';
 import October from './pages/October';
 import November from './pages/November';
 import December from './pages/December';
+import Monthly from './components/Monthly';
 
 function App() {
   return (

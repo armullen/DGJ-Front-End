@@ -1,8 +1,12 @@
+import PeachBlossom from '.../assets/PeachBlossom';
 
 function Home () {
     return(
         <div className="homePage">
-        <h1>This is my Home Page This will be where the login info goes</h1>
+            <img src={PeachBlossom} alt='peachtree'/>
+        <h1>My Digital Garden Journal</h1>
+        <button className='logIn'>Log In</button>
+        <button className='signUp'>Sign Up</button>
         </div>
     )
 }

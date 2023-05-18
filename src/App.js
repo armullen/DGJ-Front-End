@@ -19,10 +19,12 @@ import October from './pages/October';
 import November from './pages/November';
 import December from './pages/December';
 import Monthly from './components/Monthly';
+import NoteBar from './components/noteBar';
 
 function App() {
   return (
     <div className = "App">
+      <NoteBar />
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

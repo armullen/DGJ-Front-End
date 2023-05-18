@@ -4,7 +4,7 @@ function Monthly () {
     return (
         <div className='monthlyDiv'>
             <nav className='journalNav'>
-                <Link to='/january'>January</Link>
+                <Link className='januaryTab' to='/january'>January</Link>
                 <Link to='/february'>February</Link>
                 <Link to='/march'>March</Link>
                 <Link to='/april'>April</Link>

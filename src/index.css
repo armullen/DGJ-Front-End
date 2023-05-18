@@ -5,7 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #F5DEB3;
+    background-color: #ebe2cf;
   }
 
   code {
@@ -15,19 +15,19 @@ body {
 
 
 .homePage {
-  border: #af9669 20px solid;
+  display: flex;
+  flex-direction: column;
   margin: 10vw;
   padding: 10vw;
-  color: #744315;
+  color: #354449;
   font-size: 50px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 25%;
   
 }
 
 .header {
   display: flex;
-  background-color:  #425a42b0;
+  background-color:  #6a6b65;
   justify-content: space-around;
   text-decoration: none;
 }
@@ -50,8 +50,94 @@ a:hover{
 }
 
 .note {
-  background-color: #bf916755;
-  color: #92753f;
+  background-color: #bf926750;
+  color: #92753fcf;
   font-size: 10px;
+  
+}
+
+.homeBox3{
+  background-color: #efe9db;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.peachtree {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.textBox3 {
+  font-size: 15px;
+
+}
+.homeBox1{
+  background-color: #efe9db;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.peaceFlower {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.textBox1 {
+  font-size: 15px;
+
+}
+.homeBox2{
+  background-color: #cfc1ab;
+  
+  margin: auto;
+}
+.homeBox3{
+  background-color: #a89985;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  color:#ebe2cf;
+}
+.sleepyBee {
+  width: 33%;
+  height: 33%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.sunflowers {
+  width: 33%;
+  height: 33%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.seedlings {
+  width: 33%;
+  height: 33%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.textBox2 {
+  font-size: 15px;
+
+}
+
+.box2Images {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.journalNav {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  font-size: 25vh;
+}
+
+.januaryTab {
+  border: #354449 2px solid;
+  background-color: a89985;
+  border-radius: 25px;
   
 }

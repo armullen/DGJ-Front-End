@@ -1,7 +1,7 @@
 function NoteBar () {
     return(
         <div className="note">
-            <h1>It's time to plant tomatoes!</h1>
+            <h1>Happy Spring!  It's time to plant your garden!</h1>
         </div>
     )
 }

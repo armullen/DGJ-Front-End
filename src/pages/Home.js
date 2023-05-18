@@ -1,6 +1,9 @@
+
 function Home () {
     return(
-        <h1>This is my Home Page</h1>
+        <div className="homePage">
+        <h1>This is my Home Page This will be where the login info goes</h1>
+        </div>
     )
 }
 

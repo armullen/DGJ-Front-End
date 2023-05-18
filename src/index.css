@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.homePage {
+  background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fcoffee-cup-blank-spiral-notepad-white-background_23-2147898235.jpg&tbnid=l0miqUPzQiQ1NM&vet=10CLsBEDMosgFqFwoTCKDz2_DD_f4CFQAAAAAdAAAAABAD..i&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photo%2Fcoffee-cup-blank-spiral-notepad-white-background_3100600.htm&docid=wz-MA96fv6MvAM&w=626&h=417&q=free%20spiral%20notebook%20background&ved=0CLsBEDMosgFqFwoTCKDz2_DD_f4CFQAAAAAdAAAAABAD");
+  
+};

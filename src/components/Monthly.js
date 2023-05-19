@@ -4,18 +4,42 @@ function Monthly () {
     return (
         <div className='monthlyDiv'>
             <nav className='journalNav'>
-                <Link className='januaryTab' to='/january'>January</Link>
-                <Link to='/february'>February</Link>
-                <Link to='/march'>March</Link>
-                <Link to='/april'>April</Link>
-                <Link to='/may'>May</Link>
-                <Link to='/june'>June</Link>
-                <Link to='/july'>July</Link>
-                <Link to='/august'>August</Link>
-                <Link to='/september'>September</Link>
-                <Link to='/october'>October</Link>
-                <Link to='/november'>November</Link>
-                <Link to='/december'>December</Link>
+                <div className='monthDiv' id='januaryTab'>
+                    <Link className='monthLink' to='/january'>January</Link>
+                </div>
+                <div className='monthDiv' id='februaryTab'>
+                    <Link className='monthLink' to='/february'>February</Link>
+                </div>
+                <div className='monthDiv' id='marchTab'>
+                    <Link className='monthLink' to='/march'>March</Link>
+                </div>
+                <div className='monthDiv' id='aprilTab'>
+                    <Link className='monthLink' to='/april'>April</Link>
+                </div>
+                <div className='monthDiv' id='mayTab'>
+                    <Link className='monthLink' to='/may'>May</Link>
+                </div>
+                <div className='monthDiv' id='juneTab' >
+                    <Link className='monthLink' to='/june'>June</Link>
+                </div>
+                <div className='monthDiv' id='julyTab' >
+                    <Link className='monthLink' to='/july'>July</Link>
+                </div>
+                <div className='monthDiv' id='augustTab' >
+                    <Link className='monthLink' to='/august'>August</Link>
+                </div>
+                <div className='monthDiv' id='septemberTab'>
+                    <Link className='monthLink' to='/september'>September</Link>
+                </div>
+                <div className='monthDiv' id='octoberTab'>
+                    <Link className='monthLink' to='/october'>October</Link>
+                </div>
+                <div className='monthDiv' id='novemberTab' >
+                    <Link className='monthLink' to='/november'>November</Link>
+                </div>
+                <div className='monthDiv' id='decemberTab'>
+                    <Link className='monthLink' to='/december'>December</Link>
+                </div>
             </nav>
         </div>
     )

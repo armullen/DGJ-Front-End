@@ -1,10 +1,12 @@
 import Monthly from '../components/Monthly';
+import GardenNotes from "../components/GardenNotes";
 
 function July () {
     return (
         <>
-        <h1>This is July's journal pages</h1>
         <Monthly />
+        <h1>This is July's journal pages</h1>
+        <GardenNotes />
         </>
     )
 }

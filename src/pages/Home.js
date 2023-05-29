@@ -8,9 +8,12 @@ function Home () {
                 <div className="text1">
                 <h3 className="boxOneTitle">Welcome to My Digital Garden Journal</h3>
                 <h4 className="textBox1">We're glad you're here! MDGJ is a sustainable way to chronical your gardens journey!  Keep track of the progress you make on your garden space and keep resources you find helpful all in one convenient place!</h4> 
-                <button>Log In</button><button>Sign Up</button>
+                <div className='logInButtons'>
+                    <Link to='/login'>Log In</Link>
+                    <Link to='/signup'>Sign Up</Link>
                 </div>
             </div>
+        </div>
             <div className="homeBox2">
                 <h5 className='textBox2'>See what's inside...</h5>
                 <div className='box2Images'>

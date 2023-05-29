@@ -18,8 +18,9 @@ import September from './pages/September';
 import October from './pages/October';
 import November from './pages/November';
 import December from './pages/December';
-import Monthly from './components/Monthly';
 import NoteBar from './components/noteBar';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
         <Route path='/october' element={<October />} />
         <Route path='/november' element={<November />} />
         <Route path='/december' element={<December />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes> 
       <Footer />
     </div>

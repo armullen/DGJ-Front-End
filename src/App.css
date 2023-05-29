@@ -1,40 +1,254 @@
+/* ................global styling............... */
 .App {
   text-align: center;
+  font-family: optima;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  
+  a {
+    text-decoration: none;
+    margin-right: 40px;
+    color: #070500;
   }
+  
+  a:hover{
+    color: #495e49c7;
+  }
+  
+  /* ...............heading and top notes............. */
+  .header {
+    background-color:  #6a6b65;
+    /* padding: 10px; */
+    margin: 0;
+  }
+  .note {
+    background-color: #bf926750;
+    color: #92753fcf;
+    font-size: 10px;
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: auto;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .socials {
+    height: 50px;
+    margin: 10px;
+  }
+  
+  
+  /*................ home page styling............. */
+  .homePage {
+    display: flex;
+  flex-direction: column;
+  color: #354449;
+  font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textBox1 {
+  font-size: 15px;
+}
+.textBox2 {
+  font-size: 15px;  
+}
+
+.textBox3 {
+  font-size: 15px;
+}
+
+.homeBox1{
+  background-color: #efe9db;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.homeBox2{
+  background-color: #cfc1ab;
+  margin: auto;
+}
+
+.homeBox3{
+  background-color: #a89985;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  color:#ebe2cf;
+}
+
+/* ..............home page images............ */
+
+.peachtree, .peaceFlower {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box2Images {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.seedlings, .sunflowers, .sleepyBee {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ...............monthly journal tabs............... */
+
+.journalNav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  float: right;
+  font-size: 16px;
+}
+
+#januaryTab, #aprilTab, #julyTab, #octoberTab {
+  background-color: #3c4535;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#februaryTab, #mayTab, #augustTab, #novemberTab {
+  background-color: #a57b66;
+}
+#marchTab, #juneTab, #septemberTab, #decemberTab {
+  background-color: #857b66;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.monthDiv {
+  height: fit-content;
 }
+
+.monthLink {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 15px;
+}
+
+/* ................journal home page.................. */
+
+.journalHeader{
+  background-color: #cfc1ab;
+  margin: 0;
+  font-size: 50px;
+}
+.journalHome {
+  display: flex;
+  background-color: #cfc1ab;
+}
+
+.zinnias {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+.journalText {
+  font-size: 20px;
+}
+
+
+/* .........arrow animation I got from google......... */
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 71%;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  top: 90%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(-45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 6px #fff solid;
+  border-bottom: 6px #fff solid;
+}
+
+  
+.arrow:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 5px #fff solid;
+  border-bottom: 5px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+  
+@keyframes arrow {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; 
+    transform: translate(-10px, -10px); }
+}
+
+/* individual months */
+
+.susans {
+  height: 30vh;
+  width: 92%;
+  object-fit: cover;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ........hamburger nav bar.......... */
+
+.burger-menu {
+  height: 100%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: red;
+}
+
+.burgerBar {
+  width: 4em;
+  height: 0.5em;
+  background-color: blue;
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.hidden {
+  display: none;
+}
+
+.visable {
+  display: inherit;
+}
+
 
 

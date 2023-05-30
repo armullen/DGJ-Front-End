@@ -7,6 +7,11 @@ function PlantList () {
     const [plantsForm, setPlantsForm] = useState({
         type: "",
         variety: "",
+        scientificName: "",
+        growTime: "",
+        sunRequirements: "",
+        commonPests: "",
+        bestCompanionPlants: "",
     })
 
     async function getPlants() {
@@ -31,9 +36,9 @@ function PlantList () {
                 {arr.map((plants, idx) => {
                     return(
                         <div key={idx}>
-                            <Link to={`/plants/${plants._id}`}>
-                            </Link>
+                            <Link to={`/plantlist/${plants._id}`}>
                             <h3>Type: {plants.type}</h3>
+                            </Link>
                             <h3>Variety: {plants.variety}</h3>
                             <h3>Scientific Name: {plants.scientificName}</h3>
                             <h3>Grow Time: {plants.growTime}</h3>

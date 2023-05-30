@@ -3,33 +3,28 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function GardenNotes () {
-        // <div className="journalForm">
-        //     <form>
-        //         <label>Date:</label>
-        //         <input type='date' name='date'  placeholder="Date"/>
-        //         <label>Note:</label>
-        //         <input type='text' name='note'  placeholder="Your garden note goes here"/>
-        //         <button>Submit</button>
-        //     </form>
-        // </div>
-       // <h2>Past Notes:</h2>
-        const [journalEntries, setJournalEntries] = useState([]);
+    const [journalEntries, setJournalEntries] = useState([]);
+    const [journalForm, setJournalForm] = useState({
+        month: "",
+        year: "",
+        Note: "",
+    })
     async function getGardenNotes() {
         try {
             let myJournalEntries = await fetch('http://localhost:3002/journal')
             myJournalEntries = await myJournalEntries.json();
-            setJournalEntries(journalEntries);
+            setJournalEntries(myJournalEntries);
         } catch (err) {
             console.log(err);
         }
     }
-
+    
     useEffect(() => {
         getGardenNotes();
     }, []);
-
+    
     console.log(journalEntries);
-
+    
     function loaded(arr) {
         return(
             <>
@@ -38,7 +33,8 @@ function GardenNotes () {
                         <div key={idx}>
                             <Link to={`/journalEntries/${journalEntries._id}`}>
                             </Link>
-                            <h3>Date: {journalEntries.date}</h3>
+                            <h3>Month: {journalEntries.month}</h3>
+                            <h3>Year: {journalEntries.year}</h3>
                             <h3>Note:{journalEntries.notes}</h3>
                             <hr />
                         </div>
@@ -50,6 +46,17 @@ function GardenNotes () {
     return(
         <>
         {journalEntries.length ? loaded(journalEntries) : <h2>Loading...</h2>}
+            <div className="journalForm">
+                 <form>
+                     <label>Month:</label>
+                     <input type='text' name='month'  placeholder="Month"/>
+                     <label>Year:</label>
+                     <input type='number' name='year'  placeholder="year"/>
+                     <label>Note:</label>
+                     <input type='text' name='note'  placeholder="Your garden note goes here"/>
+                     <button>Submit</button>
+                 </form>
+             </div>
         </>
     )
     

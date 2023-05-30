@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import Journal from './pages/Journal';
 import MyGarden from './pages/MyGarden';
-import PlantList from './pages/PlantList';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import January from './pages/January';
@@ -22,6 +21,11 @@ import NoteBar from './components/noteBar';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
+import PlantList from './pages/PlantList';
+import PlantShow from './pages/PlantShow';
+import PlantDelete from './pages/PlantDelete';
+import PlantEdit from './pages/PlantEdit';
+
 function App() {
   return (
     <div className = "App">
@@ -30,8 +34,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/journal' element={<Journal />} />
+        
         <Route path='/mygarden' element={<MyGarden />} />
-        <Route path='/plantlist' element={<PlantList />} />
+        <Route path='/plantlist'>
+          <Route path ='' element={<PlantList />} />
+          <Route path= ':plantId'>
+            <Route path='' element={<PlantShow />} />
+            <Route path="delete" element={<PlantDelete />} />
+            <Route path="edit" element={<PlantEdit />} />
+          </Route>
+        </Route>
         <Route path ='/january' element={<January />} />
         <Route path ='/february' element={<February />} />
         <Route path ='/march' element={<March />} />

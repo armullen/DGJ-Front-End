@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 function Monthly () {
     return (
         <div className='monthlyDiv'>
-            <img className= "susans" src="/assets/susans.jpeg" alt='susans' />
             <nav className='journalNav'>
                 <div className='monthDiv' id='januaryTab'>
                     <Link className='monthLink' to='/january'>January</Link>

@@ -2,6 +2,13 @@
 .App {
   text-align: center;
   font-family: optima;
+  background-color:#cfc1ab;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #cfc1ab;
 }
   
   a {
@@ -21,15 +28,18 @@
     margin: 0;
   }
   .note {
-    background-color: #bf926750;
+    /* background-color: #bf926750; */
     color: #92753fcf;
     font-size: 10px;
+    padding-top: 2px;
   }
 
   .navBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
   }
 
   .logo {
@@ -150,60 +160,12 @@
   background-color: #cfc1ab;
 }
 
-.zinnias {
-  width: 50%;
-  height: 50%;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  margin: 20px;
-}
+
 
 .journalText {
   font-size: 20px;
 }
 
-
-/* .........arrow animation I got from google......... */
-.arrow,
-.arrow:before {
-  position: absolute;
-  left: 71%;
-}
-
-.arrow {
-  width: 50px;
-  height: 50px;
-  top: 90%;
-  margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(-45deg);
-  border-left: none;
-  border-top: none;
-  border-right: 6px #fff solid;
-  border-bottom: 6px #fff solid;
-}
-
-  
-.arrow:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  margin: -10px 0 0 -10px;
-  border-left: none;
-  border-top: none;
-  border-right: 5px #fff solid;
-  border-bottom: 5px #fff solid;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: arrow;
-}
-  
-@keyframes arrow {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; 
-    transform: translate(-10px, -10px); }
-}
 
 /* individual months */
 
@@ -213,41 +175,53 @@
   object-fit: cover;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
+.zinnias {
+  height: 30vh;
+  width: 92%;
+  object-fit: cover;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.milkweed {
+  height: 30vh;
+  width: 92%;
+  object-fit: cover;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.raspberries {
+  height: 30vh;
+  width: 92%;
+  object-fit: cover;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
 
-/* ........hamburger nav bar.......... */
+#monthHeader {
+  font-family: cursive;
+  color: #3c4535;
+  font-size: 65px;
+}
 
-.burger-menu {
-  height: 100%;
-  width: 4em;
+.journalForm {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: red;
 }
 
-.burgerBar {
-  width: 4em;
-  height: 0.5em;
-  background-color: blue;
-  border-radius: 0.5em;
+
+#journalNote {
+  width: 400px;
+  height: 200px;
+  margin-top: 20px;
+  
 }
 
-.menu {
-  width: 50%;
-  height: 100vh;
-  background-color: yellow;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
-.hidden {
-  display: none;
-}
-
-.visable {
-  display: inherit;
+#submitBtn {
+  border-radius: 25px;
+  height: 50px;
+  width: 100px;
+  background-color:blanchedalmond;
+  border:rgba(9, 11, 9, 0.3) solid 2px;
+  margin-top: 20px;
+  font-style: italic;
 }
 
 

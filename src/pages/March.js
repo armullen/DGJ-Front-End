@@ -1,12 +1,13 @@
 import Monthly from '../components/Monthly';
-import GardenNotes from "../components/GardenNotes";
+
 
 function March () {
     return (
         <>
         <Monthly />
-        <h1>This is March's journal pages</h1>
-        <GardenNotes />
+        <img className= "raspberries" src="/assets/raspberries.jpeg" alt='raspberries' />
+        <h1 id= "monthHeader">March</h1>
+      
         </>
     )
 }

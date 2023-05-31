@@ -1,4 +1,5 @@
 import Monthly from '../components/Monthly';
+import GardenNotes from "../components/GardenNotes";
 
 function Journal () {
     return (
@@ -7,9 +8,9 @@ function Journal () {
         <div className='journalHome'>
         <div className='journalHomeTwo'>
         <Monthly />
-        <h4 className='journalText'>Use this space to make notes about your garden, keep track of what works and what doesn't and what you plan to do next! The more the better. And just like you, it gets better every year!</h4>
-        <h1>Click the month here to get started</h1>
-        <div class="arrow"></div>
+        <h4 className='journalText'>Use this space to make notes about your garden, keep track of what works and what doesn't and what you plan to do next! Document EVERYTHING. Because just like you, it gets better every year!</h4>
+        <GardenNotes />
+        
         </div>
         </div>
         </>

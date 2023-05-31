@@ -4,7 +4,7 @@
 **Technologies Used**
 -React front end
 -JSX
--Tailwind styling
+-Netlify deployment
 
 **Notes**
 *This is a two part repository.  There is another for the back end with the same naming convention.*

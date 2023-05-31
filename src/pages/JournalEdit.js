@@ -1,78 +1,54 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
 
-import { Link } from "react-router-dom";
+function JournalEdit() {
+    const { entryId } = useParams();
+    const [entry, setEntry] = useState(null);
+    const navigate = useNavigate();
 
-function GardenNotes () {
-    const [journalEntries, setJournalEntries] = useState([]);
-    const [journalForm, setJournalForm] = useState({
-        month: "January",
-        year: "",
-        notes: "",
-    })
-    async function getGardenNotes() {
+    async function getJournalEntry() {
         try {
-            let myJournalEntries = await fetch('http://localhost:3002/journal')
-            myJournalEntries = await myJournalEntries.json();
-            setJournalEntries(myJournalEntries);
-        } catch (err) {
+            let myJournalEntry = await fetch (`http://localhost: 3002/journal/${entryId}`);
+            myJournalEntry = await myJournalEntry.json();
+            setEntry(myJournalEntry);
+        } catch(err) {
             console.log(err);
         }
     }
-    
+
     useEffect(() => {
-        getGardenNotes();
-    }, []);
-    
-    console.log(journalEntries);
-    
-    function loaded(arr) {
-        return(
-            <>
-                {arr.map((journalEntries, idx) => {
-                    return (
-                        <div key={idx}>
-                            <Link to={`/journal/${journalEntries._id}`}>
-                            <h3>{journalEntries.month}</h3>
-                            </Link>
-                            <h3>{journalEntries.year}</h3>
-                            <h3>{journalEntries.notes}</h3>
-                            <hr />
-                        </div>
-                    )
-                })}
-            </>
-        )
-    }
+        getJournalEntry();
+    },[]);
 
     function handleChange(e) {
-        console.log(e.target);
-        setJournalForm((previousFormState) => ({
-            ...previousFormState,
+        setEntry((currentState) => ({
+            ...currentState,
             [e.target.name]: e.target.value
         }))
     }
 
     async function handleSubmit(e) {
-        try {
+        try{
             e.preventDefault();
-            console.log(journalForm)
-            await fetch('http://localhost:3002/journal', {
-                method: "POST",
+            await fetch(`http://localhost:3002/journal/${entryId}`, {
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(journalForm)
-            })
-            getGardenNotes();
-            e.target.reset();
+                body: JSON.stringify(entry)
+            });
+            return navigate(`/journal/${entryId}`);
         } catch (err) {
             console.log(err);
         }
     }
 
-    return(
-            <div className="journalForm">
-                 <form onSubmit={handleSubmit}>
+    function loaded() {
+        return(
+            <>
+                <h2>Editing {entry.month} {entry.year}:</h2>
+                <form onSubmit={handleSubmit}>
                     <label>Month:
                         <select id="month" onChange={handleChange}>
                             <option value="january">January</option>
@@ -95,10 +71,15 @@ function GardenNotes () {
                      <input id="journalNote" type='text' name='notes' onChange={handleChange} placeholder="Your garden note goes here"/>
                      <button id="submitBtn">Submit</button>
                  </form>
-                 {journalEntries.length ? loaded(journalEntries) : <h2>Loading...</h2>}
-             </div>
+            </>
+        )
+    }
+
+    return (
+        <>
+            {entry ? loaded() : <h2>Loading...</h2>}
+        </>
     )
-    
 }
 
-export default GardenNotes;
+export default JournalEdit;

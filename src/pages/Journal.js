@@ -8,7 +8,7 @@ function Journal () {
         <div className='journalHome'>
         <div className='journalHomeTwo'>
         <Monthly />
-        <h4 className='journalText'>Use this space to make notes about your garden, keep track of what works and what doesn't and what you plan to do next! Document EVERYTHING. Because just like you, it gets better every year!</h4>
+        <h4 className='journalText'> Use this space to make notes about your garden, keep track of what works and what doesn't and what you plan to do next! Document EVERYTHING. Because just like you, it gets better every year!</h4>
         <GardenNotes />
         
         </div>

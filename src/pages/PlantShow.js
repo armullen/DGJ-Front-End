@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function PlantShow () {
     const[plant, setPlant] = useState(null);
     const { plantId } = useParams();
-    console.log(plantId);
     
     async function getPlant() {
         try {
@@ -16,8 +15,6 @@ function PlantShow () {
             console.log(err);
         }
     }
-
-    console.log(plant);
 
     function plantLoaded() {
         return(
